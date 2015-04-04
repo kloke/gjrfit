@@ -49,4 +49,11 @@ Terpstra, J, McKean, JW, and Naranjo, JD (2001),
 Weighted Wilcoxon estimates for autoregression, \emph{Australian \& New Zealand Journal of Statistics}, 43, 399-419.
 }
 \author{John Kloke <kloke@biostat.wisc.edu>}
+\examples{
+x<-cbind(rep(1,length(ramus$age)),ramus$age)
+y<-ramus$ramusht
+block<-ramus$subject
+visit<-rep(1:4,length(unique(block)))
+gjrfit.ar1(x,y,block,visit)
+}
 \keyword{robust}
